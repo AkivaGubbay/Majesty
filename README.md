@@ -1,0 +1,2 @@
+# Majesty
+The money maker
