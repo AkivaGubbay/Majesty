@@ -7,10 +7,24 @@ public class Warrior
  int level;
  int exp;
  static int count;
+ static boolean[] nameHolder = new boolean[4];
 public Warrior ()
 {
 	this.hp = 30;
+	//check if count if out of range.
 	this.count++;
-	this.name = "Warrior #"+count; 
+	this.name = generateName(); 
+}
+private String generateName(){
+	for (int i = 0; i < nameHolder.length; i++)
+	{
+		if (nameHolder[i] == false)
+		{
+			nameHolder[i] = true;
+			return "Warrior #"+ (i + 1);
+		}
+	}
+	System.out.println("No vacant spot. Programming failure.");
+	return "Idiot";
 }
 }
