@@ -24,6 +24,8 @@ private String generateName(){
 			return "Warrior #"+ (i + 1);
 		}
 	}
+	//Code should never reach here.
+	//Explanation: if nameHolder is full then 'count' failed.   
 	System.out.println("No vacant spot. Programming failure.");
 	return "Idiot";
 }
